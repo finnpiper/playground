@@ -6,7 +6,7 @@ function startDrag(e) {
     if (e.preventDefault) e.preventDefault();
 
     // IE uses srcElement, others use target
-    var targ = e.target ? e.target : e.srcElement;
+    targ = e.target ? e.target : e.srcElement;
 
     if (targ.className != 'collage-element') { return };
     // calculate event X, Y coordinates
@@ -31,7 +31,7 @@ function startDrag(e) {
 function dragDiv(e) {
     if (!drag) { return };
     if (!e) { var e = window.event };
-    var targ = e.target ? e.target : e.srcElement;
+    // var targ=e.target?e.target:e.srcElement;
     // move div element
     targ.style.left = coordX + e.clientX - offsetX + 'px';
     targ.style.top = coordY + e.clientY - offsetY + 'px';
