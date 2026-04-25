@@ -1,0 +1,7 @@
+#collage .collage-element {
+    max-width: 36vw;
+    width: auto;
+    max-height: 36vh;
+    height: auto;
+    position: absolute;
+}
